@@ -61,7 +61,7 @@ Using React + React-router + Redux is a complete overkill for a header that simp
 - [x] Open/close submenu on click
 - [x] Change user when click email
 - [x] Add CSS and make it responsive
-- [ ] Add logo (need image)
+- [ ] Add logo and icons and some animations
 - [ ] Add open/close for menu when mobile
 - [x] Add font and scss colors
 - [ ] Add linter
