@@ -27,8 +27,8 @@ Using React + React-router + Redux is a complete overkill for a header that simp
 ```
 
 
-* Open the web browser to `http://localhost:8888/`
-* If using dev, you can also use: http://localhost:8888/webpack-dev-server/ to run in iframe mode
+* Open the web browser to `http://localhost:3000/`
+* If using dev, you can also use: http://localhost:3000/webpack-dev-server/ to run in iframe mode
 
 
 ### Additional Links
@@ -51,10 +51,10 @@ Using React + React-router + Redux is a complete overkill for a header that simp
 
 ### TODO
 - [x] Add dependencies using npm
-- [ ] Add base for React + Redux
-- [ ] Add pages and handle routing
-- [ ] Open/close submenu on click
-- [ ] Change user when click email
+- [x] Add base for React + Redux
+- [x] Add pages and handle routing
+- [x] Open/close submenu on click
+- [x] Change user when click email
 - [ ] Add CSS and make it responsive
 - [ ] Add linter
 - [ ] Add some unitTests
