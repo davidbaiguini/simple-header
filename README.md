@@ -21,6 +21,11 @@ Using React + React-router + Redux is a complete overkill for a header that simp
 > $ npm run start
 ```
 
+* Run the unit-tests
+```
+> $ npm run test
+```
+
 * You can simply run Webpack build using this command:
 ```
 > $ npm run build
@@ -55,9 +60,11 @@ Using React + React-router + Redux is a complete overkill for a header that simp
 - [x] Add pages and handle routing
 - [x] Open/close submenu on click
 - [x] Change user when click email
-- [ ] Add CSS and make it responsive
-- [ ] Add font and scss colors
+- [x] Add CSS and make it responsive
+- [ ] Add logo (need image)
+- [ ] Add open/close for menu when mobile
+- [x] Add font and scss colors
 - [ ] Add linter
-- [ ] Add some unitTests
+- [x] Add some unitTests
 - [ ] Deployed to a droplet using a Docker container
 - [ ] Connect to a DataBase, somewhere (Using graphQl for fun maybe?)

@@ -13,9 +13,12 @@
         "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
     },
     "dependencies": {
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
         "node-sass-chokidar": "0.0.3",
         "npm-run-all": "^4.1.2",
         "react": "^16.2.0",
+        "react-addons-test-utils": "^15.6.2",
         "react-dom": "^16.2.0",
         "react-redux": "^5.0.7",
         "react-router": "^4.2.0",
