@@ -6,30 +6,30 @@ import './styles.css';
 export default class DropDown extends Component {
     constructor() {
         super();
-        
+
         this.state = {
             isOpen: false
         };
-        
+
         this.toggleMenu = this.toggleMenu.bind(this);
     }
-    
-    toggleMenu() {    
+
+    toggleMenu() {
         this.setState((prevState) => {
             return {
                 isOpen: !prevState.isOpen
             };
-        })        
+        })
     }
-    
-    
-    
+
+
+
     render() {
         const { changeUser, currentUser, otherUsers } = this.props
         const { isOpen } = this.state;
-        
+
         return (
-            <div>
+            <div className='dropdown'>
                 <a onClick={this.toggleMenu}>{currentUser.email}</a>
                 <ul className={isOpen ? 'open' : 'closed'}>
                     {otherUsers.map((user, index) => {
@@ -41,7 +41,7 @@ export default class DropDown extends Component {
                         )
                     })}
                     <li><Link to="/settings">Settings</Link></li>
-                    <li>Sign out</li>
+                    <li><a href="#">Sign out</a></li>
                 </ul>
             </div>
         )
@@ -52,10 +52,10 @@ DropDown.propTypes = {
     changeUser: PropTypes.func.isRequired,
     currentUser: PropTypes.shape({
         email: PropTypes.string.isRequired,
-        isAdmin: PropTypes.bool.isRequired        
+        isAdmin: PropTypes.bool.isRequired
     }).isRequired,
     otherUsers: PropTypes.arrayOf(PropTypes.shape({
         email: PropTypes.string.isRequired,
-        isAdmin: PropTypes.bool.isRequired        
+        isAdmin: PropTypes.bool.isRequired
     }).isRequired)
 }

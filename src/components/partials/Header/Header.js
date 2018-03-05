@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './styles.css';
 import DropDown from 'components/partials/DropDown';
 import PropTypes from 'prop-types';
@@ -11,17 +11,20 @@ export default class Header extends Component {
         const otherUsers = users.filter(u => u.id !== currentUserId);
         return (
             <div className='header'>
-                <ul>
-                  <li><Link to="/">Classes</Link></li>
-                  {currentUser.isAdmin && <li><Link to="/lessons">Lessons</Link></li>}
-                  {currentUser.isAdmin && <li><Link to="/libraries">Libraries</Link></li>}
-                  {!currentUser.isAdmin && <li><Link to="/assignments">Assignments</Link></li>}
+                <div className='header__logo'/>
+                <ul className='header__menu'>
+                  <li><NavLink exact activeClassName="selected" to="/">Classes</NavLink></li>
+                  {currentUser.isAdmin && <li><NavLink exact activeClassName="selected" to="/lessons">Lessons</NavLink></li>}
+                  {currentUser.isAdmin && <li><NavLink exact activeClassName="selected" to="/libraries">Libraries</NavLink></li>}
+                  {!currentUser.isAdmin && <li><NavLink exact activeClassName="selected" to="/assignments">Assignments</NavLink></li>}
                 </ul>
-                <DropDown 
-                    currentUser={currentUser} 
-                    changeUser={changeUser} 
-                    otherUsers={otherUsers}
-                />
+                <div className='header__dropdown'>
+                  <DropDown
+                  currentUser={currentUser}
+                  changeUser={changeUser}
+                  otherUsers={otherUsers}
+                  />
+                </div>
             </div>
         )
     }
@@ -32,6 +35,6 @@ Header.propTypes = {
     currentUserId: PropTypes.number.isRequired,
     users: PropTypes.arrayOf(PropTypes.shape({
         email: PropTypes.string.isRequired,
-        isAdmin: PropTypes.bool.isRequired        
+        isAdmin: PropTypes.bool.isRequired
     }).isRequired)
 }

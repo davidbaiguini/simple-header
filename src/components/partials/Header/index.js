@@ -1,4 +1,5 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router'
 import { changeUser } from 'store/actions'
 import Header from './Header'
  
@@ -19,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
  
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header)
+)(Header))

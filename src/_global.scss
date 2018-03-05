@@ -1,0 +1,29 @@
+// Should probably be plit in different files but for the sake of simplicity,
+// everything will be in this one.
+
+// ** Colors **
+$ebony-clay: #242D38;
+$pale-sky: #6C7988;
+$gray-chateau: #A1A9B5;
+$white: #FFFFFF;
+
+// ** Fonts **
+// use: @extend %font-primary--regular;
+
+// Regular
+%font-primary--regular {
+    font: {
+        family: 'Open Sans', sans-serif;
+        weight: 400;
+        style: normal;
+    }
+}
+
+// SemiBold
+%font-primary--semibold {
+    font: {
+        family: 'Open Sans', sans-serif;
+        weight: 600;
+        style: normal;
+    }
+}

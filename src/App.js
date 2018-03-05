@@ -25,21 +25,21 @@ class App extends Component {
                 <Header />
                 <div>
                   <Route exact path="/" component={ClassesPage}/>
-                  <Route path="/lessons" component={LessonsPage}/>
-                  <Route path="/libraries" component={LibrariesPage}/>
-                  <Route path="/assignments" component={AssignmentsPage}/>
-                  <Route path="/settings" component={SettingsPage}/>
+                  <Route exact path="/lessons" component={LessonsPage}/>
+                  <Route exact path="/libraries" component={LibrariesPage}/>
+                  <Route exact path="/assignments" component={AssignmentsPage}/>
+                  <Route exact path="/settings" component={SettingsPage}/>
                 </div>
-              </div>    
+              </div>
             </Router>
         )
     }
 }
 
 // const App = () => (
-// 
+//
 // )
-// 
+//
 // class App extends Component {
 //   render() {
 //     return (
