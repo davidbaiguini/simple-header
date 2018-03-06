@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import './styles.css';
-import DropDown from 'components/partials/DropDown';
 import PropTypes from 'prop-types';
 
+import DropDown from 'components/partials/DropDown';
+import logo from 'logo.svg';
+import './styles.css';
+
 export default class Header extends Component {
+
     render() {
         const {changeUser, currentUserId, users} = this.props;
         const currentUser = users.find(u => u.id === currentUserId);
         const otherUsers = users.filter(u => u.id !== currentUserId);
+
         return (
             <div className='header'>
-                <div className='header__logo'/>
+                <img src={logo} className="header__logo" alt="logo" />
                 <ul className='header__menu'>
                   <li><NavLink exact activeClassName="selected" to="/">Classes</NavLink></li>
                   {currentUser.isAdmin && <li><NavLink exact activeClassName="selected" to="/lessons">Lessons</NavLink></li>}
@@ -27,7 +31,9 @@ export default class Header extends Component {
                 </div>
             </div>
         )
+
     }
+
 }
 
 Header.propTypes = {

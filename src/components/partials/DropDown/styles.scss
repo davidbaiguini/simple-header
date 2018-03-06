@@ -2,14 +2,17 @@
 
 .dropdown {
     position: relative;
+
     a {
         cursor: pointer;
     }
+
     ul {
         margin: 15px 0 0;
         padding: 6px;
         background-color: $white;
         border-radius: 2px;
+
         @media screen and (min-width: 700px) {
             position: absolute;
             top: calc(100% + 10px);
@@ -17,21 +20,26 @@
             margin: 0;
         }
     }
+
     li {
         list-style: none;
+
         &:not(:last-child){
             margin-bottom: 5px;
         }
+
         a {
             display: block;
             color: $gray-chateau;
             padding: 6px 10px;
             border-radius: 2px;
+
             &:hover {
                 cursor: pointer;
                 background-color: $gray-chateau;
                 color: $ebony-clay;
             }
+
             @media screen and (min-width: 700px) {
                 font-size: 13px;
             }

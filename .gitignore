@@ -22,3 +22,6 @@ yarn-error.log*
 
 # CSS
 src/**/*.css
+
+# Linters
+.sonarlint

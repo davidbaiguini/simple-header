@@ -1,42 +1,62 @@
 @import 'global';
 
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .header {
     background-color: $ebony-clay;
     padding: 15px 25px;
     text-align: center;
+
     @media screen and (min-width: 700px) {
         display: flex;
         text-align: left;
         align-items: center;
     }
-    &__logo {
 
+    &__logo {
+        height: 25px;
+        animation: App-logo-spin infinite 20s linear;
+
+        @media screen and (min-width: 700px) {
+            height: 40px;
+        }
     }
+
     &__menu {
         padding: 0;
         margin: 0;
+
         @media screen and (min-width: 700px) {
             display: flex;
         }
+
         li {
             list-style: none;
-            padding-left: 20px;
             margin-bottom: 10px;
+
             @media screen and (min-width: 700px) {
                 margin-bottom: 0;
+                padding-left: 20px;
             }
         }
     }
+
     &__dropdown {
         margin-left: auto;
     }
+
     a {
         color: $gray-chateau;
         text-decoration: none;
         font-size: 12px;
+
         &:hover {
             color: $white;
         }
+
         &.selected {
             color: $white;
         }

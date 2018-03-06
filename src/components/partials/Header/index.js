@@ -19,7 +19,8 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
- 
+
+// withRouter allow us to access the history and handle the 'active' route
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
