@@ -40,7 +40,7 @@ export default class DropDown extends Component {
                         )
                     })}
                     <li><Link to="/settings">Settings</Link></li>
-                    <li><a href="#">Sign out</a></li>
+                    <li><a href="#0">Sign out</a></li>
                 </ul>
             </div>
         )
